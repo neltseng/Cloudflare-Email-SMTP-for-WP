@@ -1,6 +1,6 @@
 # Cloudflare Email SMTP for WordPress
 
-A tiny, dependency‑free snippet that routes **all** WordPress mail (`wp_mail()`)
+A tiny, dependency-free snippet that routes **all** WordPress mail (`wp_mail()`)
 through **Cloudflare Email Service**'s SMTP relay. No plugin, no settings page,
 no secret stored in code — the API token lives only in `wp-config.php`.
 
@@ -28,7 +28,7 @@ no secret stored in code — the API token lives only in `wp-config.php`.
 
 ## How it works
 
-- `phpmailer_init` points WordPress's built‑in PHPMailer at
+- `phpmailer_init` points WordPress's built-in PHPMailer at
   `smtp.mx.cloudflare.net:465` and authenticates with username `api_token`
   and your token as the password.
 - `wp_mail_from` forces the `From` address to your verified domain so
@@ -38,7 +38,7 @@ no secret stored in code — the API token lives only in `wp-config.php`.
 
 The token is read from the `CF_SMTP_TOKEN` constant in `wp-config.php`, so the
 code contains **no secrets** and is safe to share or commit. Keep the token out
-of the theme, the repo, and any synced/backed‑up location.
+of the theme, the repo, and any synced/backed-up location.
 
 ## License
 
